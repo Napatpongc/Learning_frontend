@@ -1,41 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            background-image: url(https://cdn.pixabay.com/photo/2025/06/15/04/46/duckling-9660597_640.jpg);
-        }
-        div{
-            border:2px dashed orange;
-            margin-bottom: 5px;
+  <meta charset="UTF-8">
+  <title>Flexbox Layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #222;
+      font-family: sans-serif;
+    }
 
-        }
-        .box-1{
-            margin-left: 20px;
-            background-color: white;
+    .container {
+      display: flex;               /* เปิดใช้งาน flex */
+      flex-direction: row;         /* เรียงแนวนอน */
+      justify-content: center;     /* จัดให้อยู่ตรงกลางแนวนอน */
+      align-items: center;         /* จัดให้อยู่ตรงกลางแนวตั้ง */
+      flex-wrap: wrap;             /* ขึ้นบรรทัดใหม่เมื่อเต็ม */
+      gap: 20px;                   /* ช่องว่างระหว่างกล่อง */
+      min-height: 100vh;           /* สูงเต็มจอ */
+      padding: 20px;
+    }
 
-        }
-        .box-2{
-            margin-right: 20px;
+    .box {
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(45deg, #00f, #0ff);
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #000;
+    }
 
-        }
-        img{
-            margin: 10px;
-        }
-    </style>
+    .box:nth-child(2n) {
+      background: linear-gradient(45deg, #f00, #ff0);
+    }
+  </style>
 </head>
 <body>
-    <div class = "box-1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil facere aspernatur blanditiis ab alias, similique ratione accusamus, maxime assumenda, reiciendis quia impedit ullam enim quaerat deserunt esse dolores sapiente sed.</div>
-    <div class = "box-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cupiditate eius deserunt enim quis quod aut eveniet, exercitationem nihil consequuntur assumenda maxime iste provident inventore eos asperiores voluptatem. Dolorem, ipsum!</div>
-    <div class = "box-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe minima distinctio suscipit nam voluptatibus laborum soluta repudiandae perferendis, autem nisi, corrupti aperiam numquam at sint ab quis eveniet accusamus esse?</div>
-    <div class = "box-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe minima distinctio suscipit nam voluptatibus laborum soluta repudiandae perferendis, autem nisi, corrupti aperiam numquam at sint ab quis eveniet accusamus esse?</div>
-    
-    <img src="https://cdn.pixabay.com/photo/2020/11/24/14/20/cacti-5772706_640.jpg"  alt="">
-    <img src="https://cdn.pixabay.com/photo/2020/11/24/14/20/cacti-5772706_640.jpg" alt="">
-    <img src="https://cdn.pixabay.com/photo/2020/11/24/14/20/cacti-5772706_640.jpg" alt="">
 
-\</body>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+</body>
 </html>
